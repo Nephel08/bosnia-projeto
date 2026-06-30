@@ -574,7 +574,26 @@
             <p>O país é localizado no sudeste da Europa, no coração dos Bálcãs. O terreno é dominantemente montanhoso com o famoso maciço dos Alpes Dináricos. No extremo sul fica a Herzegovina, ensolarada e cárstica, e ao norte as planícies fluviais férteis próximas à Croácia e Sérvia.</p>
           </div>
         </div>
-
+          <div class="space-y-3">
+            <h4 class="font-display font-bold text-base text-bosniaBlue">Pontos Energéticos</h4>
+            <p>A energia é essencial para o funcionamento das cidades, indústrias, escolas e residências. Ela pode ser produzida por diferentes fontes, como água (hidrelétricas), vento (energia eólica), luz do Sol (energia solar) e combustíveis fósseis, como petróleo e carvão. As fontes renováveis são consideradas mais sustentáveis porque causam menos impactos ao meio ambiente e podem ser utilizadas por longos períodos. Já as fontes não renováveis são limitadas e costumam emitir mais poluentes.</p>
+          </div>
+        </div>
+       <div class="space-y-3">
+            <h4 class="font-display font-bold text-base text-bosniaBlue">Influência da Guerra na Região</h4>
+            <p>A Guerra da Bósnia ocorreu entre 1992 e 1995 e provocou grandes mudanças no país. Muitas cidades foram destruídas, milhares de pessoas perderam suas casas e houve grande impacto na economia, na infraestrutura e na qualidade de vida da população. Após o conflito, a Bósnia iniciou um processo de reconstrução com apoio internacional, restaurando monumentos históricos, estradas, pontes e serviços essenciais. Atualmente, o país continua preservando sua história e valorizando a paz.</p>
+          </div>
+        </div>
+       <div class="space-y-3">
+            <h4 class="font-display font-bold text-base text-bosniaBlue">Questões Ambientais</h4>
+            <p>A preservação do meio ambiente depende das atitudes de toda a sociedade. O descarte correto do lixo, a reciclagem, o uso consciente dos recursos naturais e o tratamento da água e do esgoto são fundamentais para proteger a natureza e garantir qualidade de vida. O saneamento básico reduz doenças, melhora a saúde da população e evita a contaminação dos rios, lagos e do solo. Além disso, investir em fontes de energia renováveis ajuda a diminuir os impactos ambientais.</p>
+          </div>
+        </div>
+       <div class="space-y-3">
+            <h4 class="font-display font-bold text-base text-bosniaBlue">Poluição da Água, do Ar e do Solo</h4>
+            <p>A poluição acontece quando resíduos e substâncias prejudiciais são lançados no meio ambiente. O descarte inadequado de lixo, o lançamento de esgoto sem tratamento e a emissão de fumaça por veículos e indústrias contaminam a água, o ar e o solo. Esses problemas afetam a saúde das pessoas, dos animais e das plantas. Pequenas atitudes, como reciclar, economizar recursos naturais, evitar jogar lixo nas ruas e utilizar meios de transporte menos poluentes, contribuem para um ambiente mais limpo e saudável.</p>
+          </div>
+        </div>
         <!-- TIMELINE HISTORICA -->
         <div id="wiki-timeline" class="wiki-content space-y-4 hidden">
           <h4 class="font-display font-bold text-base text-bosniaBlue">Marcos Históricos da Bósnia</h4>
@@ -802,58 +821,435 @@
   <!-- CORE JAVASCRIPT LOGIC -->
   <script>
     // 50 EXACT HIGH-QUALITY QUESTIONS ON BOSNIA & HERZEGOVINA (Compact Format)
-    const questionsDatabase = [
-      {cat:"Geografia",q:"Qual é a capital da Bósnia e Herzegovina?",o:["Mostar","Sarajevo","Zenica","Tuzla"],a:1,e:"Sarajevo é a capital administrativa, cultural e econômica."},
-      {cat:"História",q:"Qual cidade sediou as Olimpíadas de Inverno de 1984?",o:["Banja Luka","Mostar","Sarajevo","Zenica"],a:2,e:"Sarajevo sediou os XIV Jogos Olímpicos de Inverno."},
-      {cat:"Turismo",q:"Qual o nome da famosa ponte histórica de Mostar?",o:["Ponte Latina","Stari Most","Ponte de Drina","Ponte Festina"],"a":1,"e":"Stari Most é uma obra-prima otomana do século XVI."},
-      {cat:"Moeda",q:"Qual é a moeda oficial do país?",o:["Euro","Kuna","Dinar","Marco Conversível"],"a":3,"e":"O Marco Conversível (BAM / KM) é indexado ao Euro."},
-      {cat:"Geografia",q:"Qual rio esmeralda passa sob a ponte de Mostar?",o:["Rio Bosna","Rio Drina","Rio Neretva","Rio Sava"],"a":2,"e":"O Rio Neretva é famoso por sua cor esmeralda e águas frias."},
-      {cat:"Culinária",q:"Qual o prato de carne grelhada servido no pão somun?",o:["Burek","Ćevapi","Baklava","Gulaš"],"a":1,"e":"O Ćevapi é feito de rolinhos de carne grelhada temperada."},
-      {cat:"Curiosidades",q:"Qual cidade abriga as supostas pirâmides bósnias?",o:["Visoko","Jajce","Konjic","Bihać"],"a":0,"e":"Visoko atrai turistas pelas colinas em formato de pirâmide."},
-      {cat:"Geografia",q:"Qual a única cidade costeira da Bósnia?",o:["Split","Neum","Dubrovnik","Kotor"],"a":1,"e":"Neum é a única cidade costeira, com 20km de litoral."},
-      {cat:"Culinária",q:"Na Bósnia, a massa folhada de carne é chamada de:",o:["Sirnica","Zeljanica","Krompiruša","Burek"],"a":3,"e":"Burek refere-se estritamente à torta folhada de carne."},
-      {cat:"Cultura",q:"Como é tradicionalmente servido o café bósnio?",o:["Copo de vidro","Conjunto de cobre (džezva)","Xícara de porcelana","Frio com limão"],"a":1,"e":"Servido na džezva de cobre com fildžan e rahat lokum."},
-      {cat:"História",q:"O assassinato de qual herdeiro em Sarajevo iniciou a 1ª Guerra?",o:["Felipe II","Francisco Ferdinando","Guilherme II","Luís XVI"],"a":1,"e":"O assassinato de Francisco Ferdinando em 1914 causou a guerra."},
-      {cat:"Religião",q:"Sarajevo é conhecida como a Jerusalém da...",o:["América","África","Europa","Ásia"],"a":2,"e":"Pela coexistência histórica de 4 grandes religiões."},
-      {cat:"Geografia",q:"Qual é o ponto mais alto da Bósnia?",o:["Monte Maglić","Monte Trebević","Monte Bjelašnica","Monte Igman"],"a":0,"e":"O Monte Maglić possui 2.386 metros de altitude."},
-      {cat:"Turismo",q:"Qual famosa cachoeira circular fica perto de Ljubuški?",o:["Skakavac","Kravice","Pliva","Martin Brod"],"a":1,"e":"As Cachoeiras de Kravice formam um belo anfiteatro natural."},
-      {cat:"Natureza",q:"Qual parque nacional abriga a floresta virgem de Perućica?",o:["Parque Una","Parque Kozara","Parque Sutjeska","Parque Drina"],"a":2,"e":"Sutjeska abriga uma das últimas florestas virgens da Europa."},
-      {cat:"Cultura",q:"Qual gênero musical poético é o 'blues dos Bálcãs'?",o:["Klapa","Sevdalinka","Ganga","Kolo"],"a":1,"e":"Sevdalinka expressa melancolia e paixão amorosa tradicional."},
-      {cat:"História",q:"Qual império governou a Bósnia do século XV ao XIX?",o:["Romano","Austro-Húngaro","Otomano","Bizantino"],"a":2,"e":"O Império Otomano governou por mais de 400 anos."},
-      {cat:"História",q:"Qual potência administrou a Bósnia após o otomano?",o:["Império Russo","Império Austro-Húngaro","França","Itália"],"a":1,"e":"O Império Austro-Húngaro assumiu em 1878."},
-      {cat:"Culinária",q:"O que é a sobremesa típica 'Tufahija'?",o:["Massa folhada de nozes","Maçã cozida recheada","Pudim de sêmola","Pastel de queijo"],"a":1,"e":"Tufahija é uma maçã cozida recheada com nozes e creme."},
-      {cat:"Geografia",q:"Qual rio serve de fronteira ao norte com a Croácia?",o:["Rio Drina","Rio Neretva","Rio Sava","Rio Vrbas"],"a":2,"e":"O Rio Sava é uma importante hidrovia de fronteira ao norte."},
-      {cat:"Cultura",q:"Qual flor de 11 pétalas homenageia as vítimas de Srebrenica?",o:["Lírio de Ouro","Flor de Srebrenica","Rosa de Sarajevo","Tulipa Negra"],"a":1,"e":"Simboliza inocência, luto e esperança desde julho de 1995."},
-      {cat:"História",q:"Em qual ano a Bósnia declarou sua independência?",o:["1989","1991","1992","1995"],"a":2,"e":"A independência da Iugoslávia foi declarada em 1992."},
-      {cat:"Geografia",q:"Qual região compõe a porção sul e ensolarada do país?",o:["Sirmia","Herzegovina","Dalmácia","Krajina"],"a":1,"e":"A Herzegovina é o sul mediterrâneo e de relevo cárstico."},
-      {cat:"Cultura",q:"Qual feriado nacional é celebrado em 1º de Março?",o:["Dia da Independência","Dia do Estado","Dia do Trabalho","Dia da Vitória"],"a":0,"e":"Celebra o referendo de independência realizado em 1992."},
-      {cat:"Turismo",q:"Qual é a famosa fonte otomana de madeira em Sarajevo?",o:["Sebilj","Inat Kuća","Bezistan","Latinska"],"a":0,"e":"O Sebilj é o símbolo central da praça de Baščaršija."},
-      {cat:"Geografia",q:"Qual rio do oeste é famoso por rafting e pelo Parque Nacional?",o:["Rio Una","Rio Bosna","Rio Vrbas","Rio Drina"],"a":0,"e":"O Rio Una é conhecido por suas águas esmeraldas límpidas."},
-      {cat:"Culinária",q:"Qual prato consiste em cebolas recheadas com carne?",o:["Ćevapi","Sogan-dolma","Begova Čorba","Klepe"],"a":1,"e":"Sogan-dolma é a cebola recheada com carne moída e arroz."},
-      {cat:"Religião",q:"Qual cidade é famosa por peregrinações de aparições marianas?",o:["Blagaj","Medjugorje","Jajce","Fojnica"],"a":1,"e":"Medjugorje atrai milhões de católicos desde 1981."},
-      {cat:"História",q:"Qual autor bósnio ganhou o Nobel de Literatura em 1961?",o:["Meša Selimović","Ivo Andrić","Mak Dizdar","Branko Ćopić"],"a":1,"e":"Ivo Andrić venceu com o livro 'A Ponte sobre o Drina'."},
-      {cat:"Cinema",q:"Qual filme bósnio venceu o Oscar de Filme Estrangeiro em 2002?",o:["Grbavica","Quo Vadis, Aida?","No Man's Land","Valter"],"a":2,"e":"'No Man's Land' (Terra de Ninguém) venceu o cobiçado prêmio."},
-      {cat:"Geografia",q:"Quais montanhas olímpicas cercam Sarajevo?",o:["Bjelašnica e Jahorina","Vlašić e Maglić","Velež e Prenj","Igman e Trebević"],"a":0,"e":"Bjelašnica e Jahorina sediaram as provas de esqui em 1984."},
-      {cat:"Moeda",q:"Qual o significado cambial inicial do Marco Conversível?",o:["Igual ao Dinar","Pareado 1:1 com Marco Alemão","O dobro do Dólar","Metade da Lira"],"a":1,"e":"Originalmente pareado ao Marco Alemão, hoje fixado ao Euro."},
-      {cat:"Idioma",q:"Quantos idiomas oficiais tem a Bósnia e Herzegovina?",o:["Apenas 1","Dois","Três","Quatro"],"a":2,"e":"Três idiomas oficiais: Bósnio, Croata e Sérvio."},
-      {cat:"História",q:"Qual ponte de Sarajevo foi palco do atentado de 1914?",o:["Ponte Latina","Ponte Festina","Ponte de Mostar","Ponte Drina"],"a":0,"e":"A Ponte Latina foi o local do assassinato do arquiduque."},
-      {cat:"Turismo",q:"Onde fica o mosteiro dervixe Blagaj Tekija (séc. XVI)?",o:["Nascente do rio Buna","Topo do monte Maglić","Centro de Mostar","Vale do rio Sava"],"a":0,"e":"Fica encravado sob a rocha cárstica na nascente do Buna."},
-      {cat:"Culinária",q:"Como é chamada a pita de queijo na tradição bósnia?",o:["Burek","Sirnica","Zeljanica","Krompiruša"],"a":1,"e":"Sirnica é a massa recheada especificamente com queijo."},
-      {cat:"Geografia",q:"Qual rio corta Banja Luka e abriga competições de rafting?",o:["Rio Bosna","Rio Vrbas","Rio Drina","Rio Sava"],"a":1,"e":"O Rio Vrbas esculpe belos cânions propícios para rafting."},
-      {cat:"Turismo",q:"Qual a atração central do Parque Nacional de Una?",o:["Cachoeira Štrbački Buk","Ponte de Višegrad","Reserva Perućica","Pirâmide do Sol"],"a":0,"e":"A cachoeira Štrbački Buk é um salto espetacular de 24m."},
-      {cat:"História",q:"Quem foi o primeiro rei coroado da Bósnia em 1377?",o:["Ban Kulin","Tvrtko I Kotromanić","Stjepan Tomašević","Ban Borić"],"a":1,"e":"Tvrtko I consolidou a Bósnia medieval como reino soberano."},
-      {cat:"Cultura",q:"Qual precioso manuscrito judaico medieval está em Sarajevo?",o:["Torá de Praga","Hagadá de Sarajevo","Bíblia de Toledo","Códice do Mar Morto"],"a":1,"e":"A Hagadá de Sarajevo é um manuscrito judaico iluminado secular."},
-      {cat:"Culinária",q:"Qual folhado de nozes e calda de açúcar é herança otomana?",o:["Hurmašica","Baklava","Tulumba","Sutlijaš"],"a":1,"e":"A Baklava bósnia é muito consumida em datas festivas."},
-      {cat:"Arquitetura",q:"Que varanda saliente em casas otomanas se projeta à rua?",o:["Minarete","Doksat / Divanhana","Bezistan","Tekija"],"a":1,"e":"Doksat aumenta a ventilação e garante privacidade da família."},
-      {cat:"História",q:"A ponte Mehmet Paša Sokolović (UNESCO) fica em qual cidade?",o:["Višegrad","Foča","Goražde","Srebrenica"],"a":0,"e":"Fica em Višegrad e inspirou o famoso livro de Ivo Andrić."},
-      {cat:"Geografia",q:"Qual lago é um dos maiores reservatórios artificiais da Europa?",o:["Lago Boračko","Lago Buško","Lago Prokoško","Lago Jablaničko"],"a":1,"e":"O Lago Buško é compartilhado com a Croácia no sudoeste."},
-      {cat:"Curiosidades",q:"Que animais recebem cuidados comunitários notáveis em Sarajevo?",o:["Cães de rua","Pombos","Esquilos","Cisnes"],"a":0,"e":"Os cães de rua são vacinados e monitorados coletivamente."},
-      {cat:"Cultura",q:"Qual festival de cinema de 1995 é o maior dos Bálcãs?",o:["Festival de Sarajevo (SFF)","Mostra de Mostar","Balkan Film Fest","Golden Lily"],"a":0,"e":"Criado durante o cerco militar como resistência pacífica."},
-      {cat:"Geografia",q:"Qual o clima predominante no norte e centro do país?",o:["Continental Moderado","Mediterrâneo Seco","Polar","Semiárido"],"a":0,"e":"Clima de invernos frios e nevados e verões quentes."},
-      {cat:"Culinária",q:"Que bolinhos de massa com carne são o 'ravióli bósnio'?",o:["Klepe","Sogan-dolma","Gulaš","Burek"],"a":0,"e":"Klepe é cozido e servido com iogurte, alho e manteiga quente."},
-      {cat:"Turismo",q:"Que cidade medieval tem uma cachoeira de 21m no centro urbano?",o:["Jajce","Travnik","Konjic","Livno"],"a":0,"e":"Jajce exibe o encontro espetacular do Pliva com o Vrbas."},
-      {cat:"História",q:"Qual carta de 1189 atesta a soberania diplomática bósnia?",o:["Carta do Ban Kulin","Acordo de Dayton","Decreto de Berlim","Tratado de Sarajevo"],"a":0,"e":"A Carta de Ban Kulin é o registro escrito mais antigo."}
-    ];
+   const questionsDatabase = [
+  // 1. Pontos Energéticos (1–15)
+  {
+    cat: "Pontos Energéticos",
+    q: "O que são pontos energéticos?",
+    o: ["Locais onde há produção ou distribuição de energia.", "Áreas de plantação.", "Regiões sem eletricidade.", "Lugares turísticos."],
+    a: 0,
+    e: "Pontos energéticos referem-se a infraestruturas voltadas para gerar ou mover energia."
+  },
+  {
+    cat: "Pontos Energéticos",
+    q: "Qual é uma fonte de energia renovável?",
+    o: ["Petróleo.", "Carvão mineral.", "Energia solar.", "Gás natural."],
+    a: 2,
+    e: "A energia solar vem da luz do Sol, um recurso inesgotável em escala humana."
+  },
+  {
+    cat: "Pontos Energéticos",
+    q: "As usinas hidrelétricas utilizam principalmente:",
+    o: ["O vento.", "A força da água.", "O carvão.", "O petróleo."],
+    a: 1,
+    e: "As hidrelétricas convertem a energia potencial e cinética da água em eletricidade."
+  },
+  {
+    cat: "Pontos Energéticos",
+    q: "Qual é a principal vantagem da energia eólica?",
+    o: ["Produz fumaça.", "É renovável.", "Depende do petróleo.", "Polui os rios."],
+    a: 1,
+    e: "A energia eólica provém do vento, sendo uma fonte limpa e renovável."
+  },
+  {
+    cat: "Pontos Energéticos",
+    q: "O que produz energia em uma usina solar?",
+    o: ["Carvão.", "Luz do Sol.", "Água.", "Madeira."],
+    a: 1,
+    e: "Painéis fotovoltaicos captam a luz solar para gerar corrente elétrica."
+  },
+  {
+    cat: "Pontos Energéticos",
+    q: "O petróleo é uma fonte de energia:",
+    o: ["Renovável.", "Nuclear.", "Não renovável.", "Solar."],
+    a: 2,
+    e: "O petróleo leva milhões de anos para se formar e suas reservas são finitas."
+  },
+  {
+    cat: "Pontos Energéticos",
+    q: "O carvão mineral é utilizado principalmente para:",
+    o: ["Produção de energia elétrica.", "Produção de alimentos.", "Construção de casas.", "Irrigação."],
+    a: 0,
+    e: "O carvão mineral é queimado em usinas termoelétricas para gerar eletricidade."
+  },
+  {
+    cat: "Pontos Energéticos",
+    q: "O que significa consumo consciente de energia?",
+    o: ["Gastar energia sem preocupação.", "Evitar desperdícios.", "Utilizar apenas velas.", "Nunca usar eletricidade."],
+    a: 1,
+    e: "Consumo consciente envolve ações do dia a dia para reduzir o desperdício de energia."
+  },
+  {
+    cat: "Pontos Energéticos",
+    q: "Qual fonte utiliza a força do vento?",
+    o: ["Hidrelétrica.", "Eólica.", "Solar.", "Nuclear."],
+    a: 1,
+    e: "A energia eólica é gerada a partir do movimento das massas de ar (vento)."
+  },
+  {
+    cat: "Pontos Energéticos",
+    q: "A energia nuclear é produzida a partir de:",
+    o: ["Urânio.", "Madeira.", "Água.", "Vento."],
+    a: 0,
+    e: "O urânio é um elemento radioativo usado como combustível em reatores nucleares."
+  },
+  {
+    cat: "Pontos Energéticos",
+    q: "Qual fonte causa menos emissão de gases poluentes?",
+    o: ["Energia solar.", "Petróleo.", "Diesel.", "Carvão."],
+    a: 0,
+    e: "A energia solar não emite gases de efeito estufa durante sua geração."
+  },
+  {
+    cat: "Pontos Energéticos",
+    q: "As hidrelétricas dependem principalmente:",
+    o: ["De rios.", "Do vento.", "Do petróleo.", "Da madeira."],
+    a: 0,
+    e: "O fluxo de água dos rios é essencial para girar as turbinas das hidrelétricas."
+  },
+  {
+    cat: "Pontos Energéticos",
+    q: "O desperdício de energia pode causar:",
+    o: ["Economia.", "Maior consumo de recursos naturais.", "Menos gastos.", "Nenhum impacto."],
+    a: 1,
+    e: "Gastar energia à toa exige que mais recursos naturais sejam explorados para suprir a demanda."
+  },
+  {
+    cat: "Pontos Energéticos",
+    q: "Qual é um benefício das energias renováveis?",
+    o: ["Poluem mais.", "São inesgotáveis em escala humana.", "Dependem do carvão.", "Produzem fumaça constantemente."],
+    a: 1,
+    e: "Fontes renováveis se regeneram naturalmente e não se esgotam com o uso."
+  },
+  {
+    cat: "Pontos Energéticos",
+    q: "A produção de energia é importante porque:",
+    o: ["Garante eletricidade para residências e indústrias.", "Serve apenas para iluminação pública.", "Não influencia a economia.", "É usada apenas em fábricas."],
+    a: 0,
+    e: "A energia elétrica sustenta o desenvolvimento socioeconômico e o conforto moderno."
+  },
+
+  // 2. Influência da Guerra na Região (16–30)
+  {
+    cat: "Influência da Guerra na Região",
+    q: "A Guerra da Bósnia ocorreu entre:",
+    o: ["1992 e 1995.", "1980 e 1983.", "2000 e 2002.", "1975 e 1978."],
+    a: 0,
+    e: "O conflito armado na Bósnia durou de abril de 1992 até a assinatura do Acordo de Dayton em 1995."
+  },
+  {
+    cat: "Influência da Guerra na Região",
+    q: "A guerra causou:",
+    o: ["Crescimento imediato da economia.", "Destruição de cidades.", "Aumento do turismo.", "Expansão das florestas."],
+    a: 1,
+    e: "Bombardeios e combates deixaram a infraestrutura urbana severamente danificada."
+  },
+  {
+    cat: "Influência da Guerra na Região",
+    q: "Muitas pessoas durante a guerra:",
+    o: ["Mudaram de país.", "Compraram mais carros.", "Foram para a Lua.", "Trabalharam normalmente."],
+    a: 0,
+    e: "O conflito gerou uma enorme crise humanitária com milhões de refugiados e deslocados."
+  },
+  {
+    cat: "Influência da Guerra na Região",
+    q: "A reconstrução da Bósnia aconteceu:",
+    o: ["Após o fim da guerra.", "Antes da guerra.", "Nunca aconteceu.", "Durante a Idade Média."],
+    a: 0,
+    e: "O processo de reconstrução nacional teve início logo após o cessar-fogo em 1995."
+  },
+  {
+    cat: "Influência da Guerra na Região",
+    q: "A guerra afetou principalmente:",
+    o: ["A população civil.", "Apenas turistas.", "Apenas fazendeiros.", "Apenas militares estrangeiros."],
+    a: 0,
+    e: "Cidadãos comuns sofreram diretamente com cercos, falta de suprimentos e violência."
+  },
+  {
+    cat: "Influência da Guerra na Região",
+    q: "Um dos impactos foi:",
+    o: ["Destruição de pontes e estradas.", "Criação de novos oceanos.", "Diminuição dos rios.", "Formação de desertos."],
+    a: 0,
+    e: "Pontos vitais de transporte e logística foram alvos frequentes durante os combates."
+  },
+  {
+    cat: "Influência da Guerra na Região",
+    q: "A guerra prejudicou:",
+    o: ["A economia.", "Apenas o esporte.", "Apenas a culinária.", "Apenas o clima."],
+    a: 0,
+    e: "O PIB despencou e o parque industrial do país foi praticamente paralisado pelo conflito."
+  },
+  {
+    cat: "Influência da Guerra na Região",
+    q: "Após a guerra foi necessário:",
+    o: ["Reconstruir cidades.", "Construir vulcões.", "Fechar todas as escolas.", "Eliminar os rios."],
+    a: 0,
+    e: "Cidades inteiras precisaram ser reestruturadas para permitir o retorno dos habitantes."
+  },
+  {
+    cat: "Influência da Guerra na Região",
+    q: "Muitos monumentos históricos foram:",
+    o: ["Danificados.", "Pintados.", "Vendidos.", "Enterrados."],
+    a: 0,
+    e: "Patrimônios culturais e religiosos de séculos passados foram bombardeados e destruídos."
+  },
+  {
+    cat: "Influência da Guerra na Região",
+    q: "A guerra provocou:",
+    o: ["Migração de pessoas.", "Crescimento das florestas.", "Aumento dos oceanos.", "Formação de geleiras."],
+    a: 0,
+    e: "Milhares de famílias migraram para regiões mais seguras dentro e fora do continente europeu."
+  },
+  {
+    cat: "Influência da Guerra na Região",
+    q: "O conflito afetou:",
+    o: ["Infraestrutura.", "Apenas animais marinhos.", "Apenas montanhas.", "Apenas aeroportos."],
+    a: 0,
+    e: "Sistemas de água, energia, estradas e comunicações sofreram colapsos generalizados."
+  },
+  {
+    cat: "Influência da Guerra na Região",
+    q: "A paz permitiu:",
+    o: ["A reconstrução do país.", "O aumento da guerra.", "O fechamento das cidades.", "O desaparecimento dos rios."],
+    a: 0,
+    e: "A estabilização política viabilizou os investimentos nacionais e externos para erguer o país."
+  },
+  {
+    cat: "Influência da Guerra na Região",
+    q: "A Ponte Velha de Mostar foi:",
+    o: ["Reconstruída.", "Vendida.", "Transferida.", "Abandonada."],
+    a: 0,
+    e: "Símbolo histórico destruído em 1993, a icônica ponte foi fielmente reconstruída nos anos seguintes."
+  },
+  {
+    cat: "Influência da Guerra na Região",
+    q: "A guerra trouxe consequências:",
+    o: ["Sociais e econômicas.", "Apenas esportivas.", "Apenas culturais.", "Apenas climáticas."],
+    a: 0,
+    e: "Os impactos afetaram profundamente a demografia, a renda e a estrutura social do país."
+  },
+  {
+    cat: "Influência da Guerra na Região",
+    q: "A reconstrução dependeu de:",
+    o: ["Cooperação internacional.", "Sorte.", "Apenas turismo.", "Apenas agricultura."],
+    a: 0,
+    e: "Ajuda de agências humanitárias, governos estrangeiros e da ONU foi crucial para reerguer a nação."
+  },
+
+  // 3. Questões Ambientais (31–45)
+  {
+    cat: "Questões Ambientais",
+    q: "O descarte correto do lixo ajuda a:",
+    o: ["Preservar o meio ambiente.", "Poluir os rios.", "Aumentar doenças.", "Produzir fumaça."],
+    a: 0,
+    e: "Descartar resíduos nos locais adequados impede a contaminação do ecossistema local."
+  },
+  {
+    cat: "Questões Ambientais",
+    q: "O lixo reciclável pode ser:",
+    o: ["Reaproveitado.", "Queimado sempre.", "Enterrado em rios.", "Jogado nas ruas."],
+    a: 0,
+    e: "Materiais como plástico, metal e papel voltam ao ciclo produtivo por meio da reciclagem."
+  },
+  {
+    cat: "Questões Ambientais",
+    q: "A coleta seletiva separa:",
+    o: ["Diferentes tipos de resíduos.", "Pessoas.", "Animais.", "Árvores."],
+    a: 0,
+    e: "Ela divide os resíduos por categorias (orgânico, plástico, vidro, papel, metal) para facilitar a reciclagem."
+  },
+  {
+    cat: "Questões Ambientais",
+    q: "O saneamento básico inclui:",
+    o: ["Tratamento de água e esgoto.", "Construção de rodovias.", "Agricultura.", "Turismo."],
+    a: 0,
+    e: "Compreende os serviços de água potável, coleta e tratamento de esgoto, e manejo de resíduos."
+  },
+  {
+    cat: "Questões Ambientais",
+    q: "A falta de saneamento pode causar:",
+    o: ["Doenças.", "Mais energia.", "Mais florestas.", "Mais chuva."],
+    a: 0,
+    e: "A exposição à água contaminada e esgoto a céu aberto propaga vírus e bactérias nocivos."
+  },
+  {
+    cat: "Questões Ambientais",
+    q: "O lixo jogado nas ruas pode:",
+    o: ["Entupir bueiros.", "Melhorar o trânsito.", "Produzir energia.", "Limpar rios."],
+    a: 0,
+    e: "Resíduos carregados pela enxurrada obstruem as galerias pluviais, provocando alagamentos."
+  },
+  {
+    cat: "Questões Ambientais",
+    q: "Reciclar significa:",
+    o: ["Transformar materiais usados em novos produtos.", "Jogar lixo no rio.", "Queimar resíduos.", "Enterrar plástico."],
+    a: 0,
+    e: "A reciclagem reprocessa itens descartados para dar origem a novos insumos."
+  },
+  {
+    cat: "Questões Ambientais",
+    q: "O esgoto deve ser:",
+    o: ["Tratado antes de chegar aos rios.", "Lançado diretamente na natureza.", "Jogado nas ruas.", "Misturado ao lixo."],
+    a: 0,
+    e: "O tratamento remove poluentes químicos e biológicos que agridem a vida aquática."
+  },
+  {
+    cat: "Questões Ambientais",
+    q: "A produção sustentável de energia busca:",
+    o: ["Reduzir impactos ambientais.", "Aumentar a poluição.", "Gastar mais recursos.", "Destruir florestas."],
+    a: 0,
+    e: "Equilibra a necessidade de energia com o respeito aos ecossistemas e uso moderado de recursos."
+  },
+  {
+    cat: "Questões Ambientais",
+    q: "Um exemplo de energia limpa é:",
+    o: ["Solar.", "Petróleo.", "Diesel.", "Carvão."],
+    a: 0,
+    e: "A energia do Sol não gera resíduos poluentes locais ou fumaça tóxica ao funcionar."
+  },
+  {
+    cat: "Questões Ambientais",
+    q: "O descarte incorreto do lixo favorece:",
+    o: ["A proliferação de insetos e doenças.", "A limpeza das cidades.", "A preservação dos rios.", "A produção de alimentos."],
+    a: 0,
+    e: "O acúmulo inadequado atrai vetores como ratos, baratas e mosquitos transmissores de enfermidades."
+  },
+  {
+    cat: "Questões Ambientais",
+    q: "A reciclagem ajuda a:",
+    o: ["Economizar recursos naturais.", "Aumentar o desperdício.", "Poluir o solo.", "Produzir fumaça."],
+    a: 0,
+    e: "Ao reutilizar materiais já existentes, diminui-se a necessidade de extrair novas matérias-primas da natureza."
+  },
+  {
+    cat: "Questões Ambientais",
+    q: "O saneamento básico melhora:",
+    o: ["A saúde da população.", "Apenas o trânsito.", "Apenas a agricultura.", "Apenas o turismo."],
+    a: 0,
+    e: "A infraestrutura sanitária adequada reduz drasticamente os índices de mortalidade e infecções."
+  },
+  {
+    cat: "Questões Ambientais",
+    q: "O consumo consciente reduz:",
+    o: ["O desperdício.", "A qualidade de vida.", "As florestas.", "Os rios."],
+    a: 0,
+    e: "Adquirir apenas o necessário e gerenciar recursos evita gastos e desperdícios desnecessários."
+  },
+  {
+    cat: "Questões Ambientais",
+    q: "Preservar o meio ambiente é responsabilidade:",
+    o: ["De todos.", "Apenas do governo.", "Apenas das empresas.", "Apenas das escolas."],
+    a: 0,
+    e: "Cuidar do planeta exige ações integradas de cidadãos, corporações e órgãos governamentais."
+  },
+
+  // 4. Poluição (46–60)
+  {
+    cat: "Poluição",
+    q: "A poluição da água pode ser causada por:",
+    o: ["Esgoto sem tratamento.", "Chuva.", "Vento.", "Luz solar."],
+    a: 0,
+    e: "O despejo de dejetos residenciais e industriais compromete diretamente a potabilidade da água."
+  },
+  {
+    cat: "Poluição",
+    q: "Os rios são importantes porque:",
+    o: ["Fornecem água.", "Produzem petróleo.", "Fabricam energia sozinhos.", "Criam montanhas."],
+    a: 0,
+    e: "Os rios são as principais fontes de abastecimento de água doce do planeta."
+  },
+  {
+    cat: "Poluição",
+    q: "A poluição dos lagos prejudica:",
+    o: ["Animais e plantas aquáticas.", "Apenas estradas.", "Apenas aviões.", "Apenas cidades."],
+    a: 0,
+    e: "A inserção de substâncias nocivas perturba o ecossistema, asfixiando peixes e algas."
+  },
+  {
+    cat: "Poluição",
+    q: "A fumaça dos veículos contribui para:",
+    o: ["Poluição do ar.", "Limpeza do ambiente.", "Formação de rios.", "Crescimento das florestas."],
+    a: 0,
+    e: "Gases como monóxido de carbono expelidos por canos de escape degradam a qualidade da atmosfera."
+  },
+  {
+    cat: "Poluição",
+    q: "A poluição do solo pode ser causada por:",
+    o: ["Lixo e produtos químicos.", "Árvores.", "Chuva.", "Flores."],
+    a: 0,
+    e: "Agrotóxicos em excesso e chorume de lixões infiltram-se na terra alterando suas propriedades químicas."
+  },
+  {
+    cat: "Poluição",
+    q: "Plantar árvores ajuda a:",
+    o: ["Melhorar a qualidade do ar.", "Aumentar a poluição.", "Produzir lixo.", "Secar rios."],
+    a: 0,
+    e: "As árvores filtram gases nocivos e liberam oxigênio por meio da fotossíntese."
+  },
+  {
+    cat: "Poluição",
+    q: "O descarte de óleo de cozinha no ralo pode:",
+    o: ["Poluir a água.", "Melhorar os rios.", "Produzir energia.", "Limpar os canos."],
+    a: 0,
+    e: "Um único litro de óleo de cozinha pode contaminar milhares de litros de água nos mananciais."
+  },
+  {
+    cat: "Poluição",
+    q: "A água contaminada pode transmitir:",
+    o: ["Doenças.", "Energia.", "Luz.", "Calor."],
+    a: 0,
+    e: "A ingestão ou contato com água suja propaga cólera, hepatite A e gastroenterites."
+  },
+  {
+    cat: "Poluição",
+    q: "O lixo nos rios pode causar:",
+    o: ["Morte de animais aquáticos.", "Aumento da água potável.", "Crescimento dos peixes.", "Limpeza da água."],
+    a: 0,
+    e: "Peixes e aves marinhas morrem asfixiados ou intoxicados ao ingerir detritos plásticos por engano."
+  },
+  {
+    cat: "Poluição",
+    q: "Uma forma de reduzir a poluição do ar é:",
+    o: ["Usar transporte coletivo.", "Queimar lixo.", "Cortar árvores.", "Aumentar o uso de carvão."],
+    a: 0,
+    e: "Menos carros circulando nas ruas diminui a queima de combustíveis e a emissão de gases poluentes."
+  },
+  {
+    cat: "Poluição",
+    q: "A queima de combustíveis fósseis libera:",
+    o: ["Gases poluentes.", "Água potável.", "Oxigênio puro.", "Vapor sem impacto."],
+    a: 0,
+    e: "Substâncias como o dióxido de carbono são liberadas, agravando a poluição e o efeito estufa."
+  },
+  {
+    cat: "Poluição",
+    q: "O solo contaminado pode prejudicar:",
+    o: ["A agricultura.", "Apenas os prédios.", "Apenas os rios.", "Apenas o clima."],
+    a: 0,
+    e: "A terra impropria ou poluída afeta diretamente o crescimento e a segurança dos alimentos plantados."
+  },
+  {
+    cat: "Poluição",
+    q: "Uma atitude que ajuda a preservar os rios é:",
+    o: ["Não jogar lixo na água.", "Descartar plástico nos rios.", "Jogar óleo na pia.", "Lançar esgoto sem tratamento."],
+    a: 0,
+    e: "Evitar o descarte de resíduos na rede hídrica mantém as bacias e correntes limpas."
+  },
+  {
+    cat: "Poluição",
+    q: "A preservação ambiental depende:",
+    o: ["Da participação da sociedade.", "Apenas das fábricas.", "Apenas do governo.", "Apenas dos cientistas."],
+    a: 0,
+    e: "A cooperação coletiva e a mudança de hábitos diários de cada cidadão sustentam a preservação duradoura."
+  },
+  {
+    cat: "Poluição",
+    q: "A principal forma de combater a poluição é:",
+    o: ["Adotar práticas sustentáveis e reduzir o desperdício.", "Produzir mais lixo.", "Queimar resíduos.", "Desmatar áreas naturais."],
+    a: 0,
+    e: "A sustentabilidade foca na redução do consumo desenfreado e na reutilização consciente de recursos."
+  }
+];
 
     // Global Game State
     let gameState = {
