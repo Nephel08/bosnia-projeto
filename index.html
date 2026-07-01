@@ -1265,7 +1265,8 @@
       selectedOptionIdx: null,
       questionTimer: 20,
       questionTimerInterval: null,
-      
+       // NOVO
+      answerLocked: false,
       // Memory Game
       memoryCards: [],
       firstCard: null,
@@ -1660,14 +1661,27 @@
     }
 
     // --- QUESTION MODAL LOGIC ---
-    function openQuestionModal() {
-      // Pick a random question from database
-      const idx = Math.floor(Math.random() * questionsDatabase.length);
-      const question = questionsDatabase[idx];
-      
-      gameState.currentQuestion = question;
-      gameState.selectedOptionIdx = null;
-      gameState.questionTimer = 20;
+    // Lista de perguntas disponíveis (sem repetição)
+let perguntasDisponiveis = [...questionsDatabase];
+
+// Embaralha as perguntas
+perguntasDisponiveis.sort(() => Math.random() - 0.5);
+   function openQuestionModal() {
+
+    // Se todas as perguntas já foram usadas,
+    // embaralha novamente
+    if (perguntasDisponiveis.length === 0) {
+        perguntasDisponiveis = [...questionsDatabase];
+        perguntasDisponiveis.sort(() => Math.random() - 0.5);
+    }
+
+    // Pega a próxima pergunta sem repetir
+    const question = perguntasDisponiveis.shift();
+
+    gameState.currentQuestion = question;
+    gameState.selectedOptionIdx = null;
+    gameState.questionTimer = 20;
+    gameState.answerLocked = false;
 
       // Update UI elements
       document.getElementById('modal-question-category').textContent = question.cat;
@@ -1722,16 +1736,37 @@
       }, 1000);
     }
 
-    function selectOption(idx) {
-      if (gameState.selectedOptionIdx !== null) return; // Answer locked
-      playSFX('click');
-      gameState.selectedOptionIdx = idx;
+   function selectOption(idx) {
 
-      // Reset style of all
-      for (let i = 0; i < 4; i++) {
-        const btn = document.getElementById(`opt-btn-${i}`);
-        if (btn) btn.className = "w-full text-left p-4 rounded-xl border border-stone-200 bg-stone-50 text-stone-700 font-semibold transition-all focus:outline-none flex items-center justify-between";
-      }
+  // Se a resposta já foi confirmada, não permite alterar
+  if (gameState.answerLocked) return;
+
+  playSFX('click');
+
+  // Salva a alternativa escolhida
+  gameState.selectedOptionIdx = idx;
+
+  // Remove o destaque de todas
+  for (let i = 0; i < 4; i++) {
+    const btn = document.getElementById(`opt-btn-${i}`);
+
+    if (!btn) continue;
+
+    btn.className =
+      "w-full text-left p-4 rounded-xl border border-stone-200 bg-stone-50 text-stone-700 font-semibold transition-all focus:outline-none flex items-center justify-between";
+  }
+
+  // Destaca somente a escolhida
+  const sBtn = document.getElementById(`opt-btn-${idx}`);
+
+  if (sBtn) {
+    sBtn.className =
+      "w-full text-left p-4 rounded-xl border-2 border-bosniaBlue bg-bosniaBlue/5 text-stone-800 font-bold transition-all focus:outline-none flex items-center justify-between";
+  }
+
+  // Habilita o botão confirmar
+  document.getElementById('modal-btn-action').disabled = false;
+}
 
       // Highlight selected
       const sBtn = document.getElementById(`opt-btn-${idx}`);
@@ -1745,6 +1780,7 @@
     }
 
     function submitAnswer() {
+      gameState.answerLocked = true;
       if (gameState.selectedOptionIdx === null) return;
       clearInterval(gameState.questionTimerInterval);
       
