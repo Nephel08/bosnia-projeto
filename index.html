@@ -1265,8 +1265,7 @@
       selectedOptionIdx: null,
       questionTimer: 20,
       questionTimerInterval: null,
-       // NOVO
-      answerLocked: false,
+  
       // Memory Game
       memoryCards: [],
       firstCard: null,
@@ -1681,7 +1680,7 @@ perguntasDisponiveis.sort(() => Math.random() - 0.5);
     gameState.currentQuestion = question;
     gameState.selectedOptionIdx = null;
     gameState.questionTimer = 20;
-    gameState.answerLocked = false;
+    
 
       // Update UI elements
       document.getElementById('modal-question-category').textContent = question.cat;
@@ -1737,36 +1736,15 @@ perguntasDisponiveis.sort(() => Math.random() - 0.5);
     }
 
    function selectOption(idx) {
+      if (gameState.selectedOptionIdx !== null) return; // Answer locked
+      playSFX('click');
+      gameState.selectedOptionIdx = idx;
 
-  // Se a resposta já foi confirmada, não permite alterar
-  if (gameState.answerLocked) return;
-
-  playSFX('click');
-
-  // Salva a alternativa escolhida
-  gameState.selectedOptionIdx = idx;
-
-  // Remove o destaque de todas
-  for (let i = 0; i < 4; i++) {
-    const btn = document.getElementById(`opt-btn-${i}`);
-
-    if (!btn) continue;
-
-    btn.className =
-      "w-full text-left p-4 rounded-xl border border-stone-200 bg-stone-50 text-stone-700 font-semibold transition-all focus:outline-none flex items-center justify-between";
-  }
-
-  // Destaca somente a escolhida
-  const sBtn = document.getElementById(`opt-btn-${idx}`);
-
-  if (sBtn) {
-    sBtn.className =
-      "w-full text-left p-4 rounded-xl border-2 border-bosniaBlue bg-bosniaBlue/5 text-stone-800 font-bold transition-all focus:outline-none flex items-center justify-between";
-  }
-
-  // Habilita o botão confirmar
-  document.getElementById('modal-btn-action').disabled = false;
-}
+      // Reset style of all
+      for (let i = 0; i < 4; i++) {
+        const btn = document.getElementById(`opt-btn-${i}`);
+        if (btn) btn.className = "w-full text-left p-4 rounded-xl border border-stone-200 bg-stone-50 text-stone-700 font-semibold transition-all focus:outline-none flex items-center justify-between";
+      }
 
       // Highlight selected
       const sBtn = document.getElementById(`opt-btn-${idx}`);
@@ -1780,7 +1758,7 @@ perguntasDisponiveis.sort(() => Math.random() - 0.5);
     }
 
     function submitAnswer() {
-      gameState.answerLocked = true;
+     
       if (gameState.selectedOptionIdx === null) return;
       clearInterval(gameState.questionTimerInterval);
       
